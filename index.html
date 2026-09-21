@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
   body{ margin:0; }
   [hidden]{ display:none !important; }
   img{ max-width:100%; }
-
+ 
   :root{
     --ivory:#f6efdf;
     --ivory-deep:#e8dbb8;
@@ -22,24 +23,24 @@
     --ink-900:#2a1a10;
     --shadow:rgba(20,8,4,.45);
   }
-
+ 
   *,*::before,*::after{box-sizing:border-box;}
-
+ 
   body{
     background:var(--ivory);
     color:var(--ink-900);
     font-family:'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
     overflow-x:hidden;
   }
-
+ 
   h1,h2,h3{
     font-weight:600;
     margin:0;
     text-wrap:balance;
   }
-
+ 
   p{ margin:0; }
-
+ 
   .eyebrow{
     font-size:.78rem;
     letter-spacing:.28em;
@@ -47,40 +48,40 @@
     color:var(--gold-500);
     font-weight:600;
   }
-
+ 
   .script{
     font-family:'Mrs Saint Delafield', 'Brush Script MT', cursive;
     line-height:1;
   }
-
+ 
   .arabic{
     font-family:'Amiri', 'Traditional Arabic', serif;
     direction:rtl;
   }
-
+ 
   button{ font-family:inherit; }
-
+ 
   a{ color:inherit; }
-
+ 
   /* ---------- layout shell ---------- */
   .wrap{
     max-width:640px;
     margin-inline:auto;
     padding-inline:24px;
   }
-
+ 
   section{
     padding-block:88px;
     position:relative;
   }
-
+ 
   .divider{
     width:64px;
     height:2px;
     background:linear-gradient(90deg,transparent,var(--gold-500),transparent);
     margin-inline:auto;
   }
-
+ 
   /* ---------- petals ---------- */
   .petals{ position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:2; }
   .petal{
@@ -105,7 +106,7 @@
   @media (prefers-reduced-motion: reduce){
     .petal{ animation:none; display:none; }
   }
-
+ 
   /* ---------- envelope screen ---------- */
   #envelope{
     position:fixed; inset:0; z-index:50;
@@ -131,14 +132,14 @@
     visibility:hidden;
     pointer-events:none;
   }
-
+ 
   .env-invite{
     font-size:1rem;
     letter-spacing:.22em;
     text-transform:uppercase;
     color:var(--maroon-700);
   }
-
+ 
   .seal-btn{
     position:relative;
     width:190px; height:190px;
@@ -157,7 +158,7 @@
   .seal-btn:hover{ transform:scale(1.04); }
   .seal-btn:active{ transform:scale(.97); }
   .seal-btn:focus-visible{ outline:3px solid var(--maroon-700); outline-offset:6px; }
-
+ 
   .seal-ring{
     width:150px; height:150px;
     border-radius:50%;
@@ -169,29 +170,19 @@
     color:#fbeecb;
     text-shadow:0 2px 3px rgba(0,0,0,.5);
   }
-
+ 
   .env-open-label{
     font-size:.85rem;
     letter-spacing:.3em;
     text-transform:uppercase;
     color:var(--ink-900);
   }
-  .env-sound-note{
-    font-size:.78rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--maroon-600);
-    opacity:.75;
-    border-top:1px solid var(--gold-500);
-    padding-top:10px;
-  }
-
   /* ---------- main content ---------- */
   #site{
     position:relative;
   }
   #site[hidden]{ display:none; }
-
+ 
   .reveal{
     opacity:0;
     transform:translateY(18px);
@@ -201,7 +192,7 @@
   @media (prefers-reduced-motion: reduce){
     .reveal{ opacity:1; transform:none; transition:none; }
   }
-
+ 
   /* hero */
   .hero{
     background:
@@ -260,7 +251,7 @@
   }
   @keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(8px);} }
   @media (prefers-reduced-motion: reduce){ .hero-scroll{ animation:none; } }
-
+ 
   /* welcome */
   .welcome{ text-align:center; }
   .welcome .eyebrow{ margin-bottom:14px; }
@@ -270,7 +261,7 @@
     margin-top:22px;
     color:#3c2415;
   }
-
+ 
   /* couple */
   .couple-head{ text-align:center; margin-bottom:52px; }
   .couple-grid{
@@ -294,7 +285,7 @@
   }
   .couple-card .parents{ font-size:1.02rem; line-height:1.6; color:#4a3220; }
   .tbc{ color:var(--maroon-600); font-style:italic; }
-
+ 
   /* date panel */
   .date-panel{
     background:var(--maroon-700);
@@ -315,23 +306,7 @@
   .countdown .num{ font-size:1.8rem; font-variant-numeric:tabular-nums; color:var(--gold-300); }
   .countdown .lbl{ font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; margin-top:4px; opacity:.8; }
   .date-note{ max-width:44ch; margin-inline:auto; font-size:1.02rem; line-height:1.6; color:#efe1bd; }
-
-  /* order of day */
-  .order-head{ text-align:center; margin-bottom:46px; }
-  .timeline{ position:relative; padding-left:26px; display:flex; flex-direction:column; gap:26px; }
-  .timeline::before{
-    content:""; position:absolute; left:5px; top:6px; bottom:6px; width:1px;
-    background:linear-gradient(var(--gold-500), var(--maroon-600));
-  }
-  .tl-item{ position:relative; }
-  .tl-item::before{
-    content:""; position:absolute; left:-26px; top:5px; width:10px; height:10px;
-    border-radius:50%; background:var(--gold-500);
-    box-shadow:0 0 0 4px var(--ivory);
-  }
-  .tl-time{ font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--maroon-600); font-style:italic; }
-  .tl-label{ font-size:1.28rem; margin-top:2px; }
-
+ 
   /* venue / info grid */
   .info-head{ text-align:center; margin-bottom:44px; }
   .info-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
@@ -357,51 +332,7 @@
     opacity:.5;
     cursor:not-allowed;
   }
-
-  /* rsvp */
-  .rsvp-head{ text-align:center; margin-bottom:40px; }
-  form#rsvp-form{ display:flex; flex-direction:column; gap:18px; }
-  .field label{
-    display:block; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase;
-    color:var(--maroon-700); margin-bottom:6px;
-  }
-  .field input, .field select, .field textarea{
-    width:100%;
-    border:none; border-bottom:1px solid var(--maroon-600);
-    background:transparent;
-    padding:10px 4px;
-    font-family:inherit; font-size:1.05rem; color:var(--ink-900);
-  }
-  .field input:focus, .field select:focus, .field textarea:focus{
-    outline:none; border-bottom:2px solid var(--gold-500);
-  }
-  .attend-choice{ display:flex; gap:12px; flex-wrap:wrap; }
-  .attend-choice label{
-    flex:1; min-width:150px;
-    border:1px solid var(--maroon-600);
-    padding:12px 10px; text-align:center;
-    font-size:.85rem; letter-spacing:.08em; text-transform:uppercase;
-    cursor:pointer;
-  }
-  .attend-choice input{ position:absolute; opacity:0; pointer-events:none; }
-  .attend-choice label:has(input:checked){
-    background:var(--maroon-700); color:#f7ecd6; border-color:var(--maroon-700);
-  }
-  .submit-btn{
-    margin-top:8px;
-    background:var(--maroon-700); color:#f7ecd6;
-    border:none; padding:14px 20px;
-    font-size:.85rem; letter-spacing:.2em; text-transform:uppercase;
-    cursor:pointer;
-  }
-  .submit-btn:hover{ background:var(--maroon-900); }
-  .rsvp-thanks{
-    text-align:center; border:1px solid var(--gold-500); padding:30px 20px;
-  }
-  .rsvp-thanks h3{ color:var(--maroon-700); font-size:1.5rem; margin-bottom:10px; }
-  .rsvp-thanks p{ font-size:1rem; line-height:1.6; color:#4a3220; }
-  .rsvp-note{ margin-top:22px; font-size:.85rem; line-height:1.6; color:#6b5238; text-align:center; }
-
+ 
   /* prayer / footer */
   .prayer{
     background:linear-gradient(180deg,var(--maroon-900),var(--maroon-700));
@@ -412,17 +343,17 @@
   .prayer .translation{ font-style:italic; max-width:38ch; margin:0 auto 30px; color:#e9d8ab; line-height:1.6; }
   .prayer .sign{ font-family:'Mrs Saint Delafield',cursive; font-size:2.4rem; color:var(--gold-300); margin-bottom:10px; }
   .prayer .thanks{ font-size:1.05rem; max-width:40ch; margin-inline:auto; color:#f1e3bd; line-height:1.6; }
-
+ 
   .gift-note{
     text-align:center; font-size:.95rem; line-height:1.7; color:#4a3220;
     max-width:48ch; margin-inline:auto;
   }
-
+ 
   footer{
     text-align:center; padding-block:40px 60px;
     font-size:.78rem; letter-spacing:.22em; text-transform:uppercase; color:var(--maroon-600);
   }
-
+ 
   /* music toggle */
   #music-toggle{
     position:fixed; right:18px; bottom:18px; z-index:40;
@@ -436,6 +367,7 @@
     font-size:.72rem; letter-spacing:.16em; text-transform:uppercase;
     backdrop-filter:blur(2px);
   }
+  #music-toggle:hover{ background:rgba(51,11,19,1); }
   #music-toggle .bars{ display:flex; gap:2px; align-items:flex-end; height:12px; }
   #music-toggle .bars i{
     width:2px; background:var(--gold-300); display:block; animation:eq 1s ease-in-out infinite;
@@ -446,26 +378,26 @@
   #music-toggle .bars i:nth-child(4){ height:9px; animation-delay:.2s; }
   #music-toggle[aria-pressed="false"] .bars i{ animation-play-state:paused; height:3px; }
   @keyframes eq{ 0%,100%{ transform:scaleY(.4);} 50%{ transform:scaleY(1);} }
+  #yt-player-wrap{ position:absolute; width:1px; height:1px; overflow:hidden; opacity:0; pointer-events:none; }
 </style>
 </head>
 <body>
-
+ 
 <div class="petals" aria-hidden="true">
   <div class="petal"></div><div class="petal"></div><div class="petal"></div>
   <div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div>
 </div>
-
+ 
 <div id="envelope">
   <p class="env-invite">You are invited to our special day</p>
   <button class="seal-btn" id="open-btn" aria-label="Open the wedding invitation">
     <span class="seal-ring"><span class="seal-letter script">S&amp;T</span></span>
   </button>
   <p class="env-open-label">Tap to open</p>
-  <p class="env-sound-note">Best with sound on</p>
 </div>
-
+ 
 <main id="site" hidden>
-
+ 
   <section class="hero">
     <div class="wrap">
       <div class="hero-arch">
@@ -482,7 +414,7 @@
       <button class="hero-scroll" id="scroll-cue" aria-label="Scroll to read more">&#8964;</button>
     </div>
   </section>
-
+ 
   <section class="welcome reveal">
     <div class="wrap">
       <p class="eyebrow">In the Name of Allah, the Most Gracious</p>
@@ -490,7 +422,7 @@
       <p>With grateful hearts and the blessing of our families, we would be honoured to have you join us as Sakib and Thamina begin their life together. Your presence would mean the world to us as we celebrate this new chapter, In sha Allah.</p>
     </div>
   </section>
-
+ 
   <section class="couple reveal">
     <div class="wrap">
       <div class="couple-head">
@@ -511,7 +443,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section class="date-panel reveal">
     <div class="wrap">
       <p class="eyebrow">Counting Every Moment</p>
@@ -525,25 +457,7 @@
       <p class="date-note">Mark your calendars &mdash; we can't wait to celebrate with you on <strong>25th October 2026</strong>, In sha Allah.</p>
     </div>
   </section>
-
-  <section class="order reveal">
-    <div class="wrap">
-      <div class="order-head">
-        <p class="eyebrow">Order of the Day</p>
-        <h2 style="font-size:1.6rem; margin-top:10px; color:var(--maroon-700);">To Be Confirmed</h2>
-      </div>
-      <div class="timeline">
-        <div class="tl-item"><p class="tl-time">Time TBC</p><p class="tl-label">Guest Arrival</p></div>
-        <div class="tl-item"><p class="tl-time">Time TBC</p><p class="tl-label">Groom Arrival</p></div>
-        <div class="tl-item"><p class="tl-time">Time TBC</p><p class="tl-label">Bride Arrival</p></div>
-        <div class="tl-item"><p class="tl-time">Time TBC</p><p class="tl-label">Nikah Ceremony</p></div>
-        <div class="tl-item"><p class="tl-time">Time TBC</p><p class="tl-label">Food Served</p></div>
-        <div class="tl-item"><p class="tl-time">Time TBC</p><p class="tl-label">Cake &amp; Celebration</p></div>
-        <div class="tl-item"><p class="tl-time">Time TBC</p><p class="tl-label">The Evening Ends</p></div>
-      </div>
-    </div>
-  </section>
-
+ 
   <section class="info reveal">
     <div class="wrap">
       <div class="info-head">
@@ -567,57 +481,12 @@
         </div>
         <div class="info-card full">
           <p class="eyebrow" style="font-size:.7rem;">RSVP By</p>
-          <h3 class="tbc" style="font-size:1.05rem;">To be confirmed &mdash; kindly confirm your seat below</h3>
+          <h3 class="tbc" style="font-size:1.05rem;">To be confirmed</h3>
         </div>
       </div>
     </div>
   </section>
-
-  <section class="rsvp reveal">
-    <div class="wrap">
-      <div class="rsvp-head">
-        <p class="eyebrow">Will You Join Us?</p>
-        <h2 style="font-size:1.8rem; margin-top:10px; color:var(--maroon-700);">RSVP</h2>
-      </div>
-
-      <form id="rsvp-form" novalidate>
-        <div class="field">
-          <label for="rsvp-name">Full Name</label>
-          <input id="rsvp-name" name="name" type="text" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label for="rsvp-email">Your Email</label>
-          <input id="rsvp-email" name="email" type="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label id="attend-label">Will You Attend?</label>
-          <div class="attend-choice" role="radiogroup" aria-labelledby="attend-label">
-            <label><input type="radio" name="attending" value="yes" required> Joyfully Accept</label>
-            <label><input type="radio" name="attending" value="no"> Regretfully Decline</label>
-          </div>
-        </div>
-        <div class="field">
-          <label for="rsvp-guests">Number of Guests</label>
-          <select id="rsvp-guests" name="guests">
-            <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="rsvp-note">A Note for the Couple</label>
-          <textarea id="rsvp-note" name="note" rows="3"></textarea>
-        </div>
-        <button class="submit-btn" type="submit">Send RSVP</button>
-      </form>
-
-      <div class="rsvp-thanks" id="rsvp-thanks" hidden>
-        <h3>Thank you!</h3>
-        <p id="rsvp-thanks-msg">Your RSVP has been noted on this device.</p>
-      </div>
-
-      <p class="rsvp-note">This invitation is still a work in progress &mdash; once the venue and RSVP contact are confirmed, this form can be connected so replies reach Sakib directly.</p>
-    </div>
-  </section>
-
+ 
   <section class="prayer reveal">
     <div class="wrap">
       <p class="eyebrow" style="color:var(--gold-300);">A Prayer for the Couple</p>
@@ -627,33 +496,35 @@
       <p class="thanks">We can't wait to celebrate with you. Your presence is the greatest gift &mdash; with love and gratitude, from both our families.</p>
     </div>
   </section>
-
+ 
   <section class="reveal">
     <div class="wrap gift-note">
       <p class="eyebrow" style="margin-bottom:14px;">A Note on Gifts</p>
       <p>Your presence is the best gift for us. Should you wish to give something more, please note we're unable to receive boxes or physical presents &mdash; kindly contact the family for details.</p>
     </div>
   </section>
-
+ 
   <footer>Sakib &amp; Thamina &middot; 25 October 2026</footer>
 </main>
-
+ 
+<div id="yt-player-wrap"><div id="yt-player"></div></div>
+ 
 <button id="music-toggle" aria-pressed="false" aria-label="Play music">
   <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-  <span id="music-label">Music</span>
+  <span>Barakallah</span>
 </button>
-
+ 
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
 (function(){
   "use strict";
-
+ 
   var envelope = document.getElementById('envelope');
   var openBtn = document.getElementById('open-btn');
   var site = document.getElementById('site');
   var scrollCue = document.getElementById('scroll-cue');
   var musicBtn = document.getElementById('music-toggle');
-  var musicLabel = document.getElementById('music-label');
-
+ 
   /* ---------------- countdown to the wedding date ---------------- */
   var WEDDING_DATE = new Date('2026-10-25T00:00:00');
   var cdDays = document.getElementById('cd-days');
@@ -661,9 +532,9 @@
   var cdMins = document.getElementById('cd-mins');
   var cdSecs = document.getElementById('cd-secs');
   var countdownTimer = null;
-
+ 
   function pad(n){ return String(n).padStart(2, '0'); }
-
+ 
   function tickCountdown(){
     var diff = WEDDING_DATE.getTime() - Date.now();
     if(diff <= 0){
@@ -684,88 +555,55 @@
     cdMins.textContent = pad(mins);
     cdSecs.textContent = pad(secs);
   }
-
+ 
   if(cdDays && cdHours && cdMins && cdSecs){
     tickCountdown();
     countdownTimer = setInterval(tickCountdown, 1000);
   }
-
-  /* ---------------- ambient music (synthesised, no external audio) ---------------- */
-  var audioCtx = null;
-  var masterGain = null;
-  var musicTimer = null;
+ 
+  /* ---------------- our song (YouTube embed) ---------------- */
+  var ytPlayer = null;
+  var ytReady = false;
+  var wantsPlay = false;
   var playing = false;
-
-  var scale = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25]; // C major pentatonic-ish, gentle
-
-  function ensureCtx(){
-    if(!audioCtx){
-      var AC = window.AudioContext || window.webkitAudioContext;
-      if(!AC) return null;
-      audioCtx = new AC();
-      masterGain = audioCtx.createGain();
-      masterGain.gain.value = 0.0001;
-      masterGain.connect(audioCtx.destination);
-    }
-    return audioCtx;
-  }
-
-  function pluckNote(freq, time, dur){
-    var osc = audioCtx.createOscillator();
-    var gain = audioCtx.createGain();
-    var filter = audioCtx.createBiquadFilter();
-    filter.type = 'lowpass';
-    filter.frequency.value = 1800;
-    osc.type = 'sine';
-    osc.frequency.value = freq;
-    gain.gain.setValueAtTime(0, time);
-    gain.gain.linearRampToValueAtTime(0.16, time + 0.4);
-    gain.gain.exponentialRampToValueAtTime(0.0001, time + dur);
-    osc.connect(filter);
-    filter.connect(gain);
-    gain.connect(masterGain);
-    osc.start(time);
-    osc.stop(time + dur + 0.1);
-  }
-
-  function scheduleLoop(){
-    if(!playing || !audioCtx) return;
-    var now = audioCtx.currentTime;
-    var note = scale[Math.floor(Math.random() * scale.length)];
-    var octaveDown = Math.random() < 0.35;
-    pluckNote(octaveDown ? note / 2 : note, now + 0.05, 3.2);
-    musicTimer = setTimeout(scheduleLoop, 1400 + Math.random() * 900);
-  }
-
+ 
+  window.onYouTubeIframeAPIReady = function(){
+    ytPlayer = new YT.Player('yt-player', {
+      videoId: 'cWZfqqwPbtU',
+      playerVars: { autoplay: 0, controls: 0, disablekb: 1, modestbranding: 1, rel: 0, playsinline: 1 },
+      events: {
+        onReady: function(){
+          ytReady = true;
+          if(wantsPlay){ ytPlayer.playVideo(); }
+        },
+        onStateChange: function(e){
+          if(e.data === YT.PlayerState.PLAYING){
+            playing = true;
+            musicBtn.setAttribute('aria-pressed', 'true');
+            musicBtn.setAttribute('aria-label', 'Pause music');
+          } else if(e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED){
+            playing = false;
+            musicBtn.setAttribute('aria-pressed', 'false');
+            musicBtn.setAttribute('aria-label', 'Play music');
+          }
+        }
+      }
+    });
+  };
+ 
   function startMusic(){
-    var ctx = ensureCtx();
-    if(!ctx){ return; }
-    if(ctx.state === 'suspended'){ ctx.resume(); }
-    playing = true;
-    masterGain.gain.cancelScheduledValues(ctx.currentTime);
-    masterGain.gain.setTargetAtTime(1, ctx.currentTime, 0.6);
-    musicBtn.setAttribute('aria-pressed', 'true');
-    musicBtn.setAttribute('aria-label', 'Pause music');
-    musicLabel.textContent = 'Music';
-    scheduleLoop();
+    wantsPlay = true;
+    if(ytReady && ytPlayer){ ytPlayer.playVideo(); }
   }
-
   function stopMusic(){
-    playing = false;
-    if(musicTimer){ clearTimeout(musicTimer); musicTimer = null; }
-    if(audioCtx && masterGain){
-      masterGain.gain.setTargetAtTime(0.0001, audioCtx.currentTime, 0.3);
-    }
-    musicBtn.setAttribute('aria-pressed', 'false');
-    musicBtn.setAttribute('aria-label', 'Play music');
-    musicLabel.textContent = 'Music';
+    wantsPlay = false;
+    if(ytReady && ytPlayer){ ytPlayer.pauseVideo(); }
   }
-
+ 
   musicBtn.addEventListener('click', function(){
     if(playing){ stopMusic(); } else { startMusic(); }
-    try{ localStorage.setItem('sakib-invite-music', playing ? 'on' : 'off'); }catch(e){}
   });
-
+ 
   /* ---------------- envelope open ---------------- */
   function openEnvelope(){
     envelope.classList.add('opened');
@@ -777,15 +615,15 @@
     }, 950);
     initReveal();
   }
-
+ 
   openBtn.addEventListener('click', openEnvelope);
   document.body.style.overflow = 'hidden';
-
+ 
   scrollCue.addEventListener('click', function(){
     var next = document.querySelector('.welcome');
     if(next){ next.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
-
+ 
   /* ---------------- scroll reveal ---------------- */
   function initReveal(){
     var items = document.querySelectorAll('.reveal');
@@ -803,42 +641,9 @@
     }, { threshold: 0.15 });
     items.forEach(function(el){ io.observe(el); });
   }
-
-  /* ---------------- rsvp form ---------------- */
-  var form = document.getElementById('rsvp-form');
-  var thanks = document.getElementById('rsvp-thanks');
-  var thanksMsg = document.getElementById('rsvp-thanks-msg');
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var name = form.name.value.trim();
-    var attending = form.querySelector('input[name="attending"]:checked');
-    if(!name || !attending){
-      form.reportValidity();
-      return;
-    }
-    var record = {
-      name: name,
-      email: form.email.value.trim(),
-      attending: attending.value,
-      guests: form.guests.value,
-      note: form.note.value.trim(),
-      savedAt: new Date().toISOString()
-    };
-    try{
-      var existing = JSON.parse(localStorage.getItem('sakib-invite-rsvp') || '[]');
-      existing.push(record);
-      localStorage.setItem('sakib-invite-rsvp', JSON.stringify(existing));
-    }catch(err){}
-
-    thanksMsg.textContent = attending.value === 'yes'
-      ? 'Thank you, ' + name + '! We’ve noted that you’ll be joining us on 25th October 2026. We’ll share the venue as soon as it’s confirmed.'
-      : 'Thank you for letting us know, ' + name + '. We’ll miss you, but we appreciate the reply.';
-    form.hidden = true;
-    thanks.hidden = false;
-  });
+ 
 })();
 </script>
-
+ 
 </body>
 </html>
