@@ -3,13 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sakib &amp; Thamina</title>
+<title>Sakib &amp; Rebecca</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Mrs+Saint+Delafield&family=Amiri:ital@0;1&display=swap">
+</head>
+<body>
+
+
 <style>
-  html{ color-scheme: light; }
-  body{ margin:0; }
-  [hidden]{ display:none !important; }
-  img{ max-width:100%; }
+html{ color-scheme: light; }
+body{ margin:0; }
+[hidden]{ display:none !important; }
+img{ max-width:100%; }
 
   :root{
     --ivory:#f6efdf;
@@ -353,7 +357,7 @@
     font-size:.78rem; letter-spacing:.22em; text-transform:uppercase; color:var(--maroon-600);
   }
 
-  /* music toggle */
+  /* music link */
   #music-toggle{
     position:fixed; right:18px; bottom:18px; z-index:40;
     display:flex; align-items:center; gap:8px;
@@ -363,24 +367,13 @@
     border-radius:999px;
     padding:10px 16px;
     cursor:pointer;
+    text-decoration:none;
     font-size:.72rem; letter-spacing:.16em; text-transform:uppercase;
     backdrop-filter:blur(2px);
   }
   #music-toggle:hover{ background:rgba(51,11,19,1); }
-  #music-toggle .bars{ display:flex; gap:2px; align-items:flex-end; height:12px; }
-  #music-toggle .bars i{
-    width:2px; background:var(--gold-300); display:block; animation:eq 1s ease-in-out infinite;
-  }
-  #music-toggle .bars i:nth-child(1){ height:5px; animation-delay:.1s; }
-  #music-toggle .bars i:nth-child(2){ height:11px; animation-delay:.3s; }
-  #music-toggle .bars i:nth-child(3){ height:7px; animation-delay:.5s; }
-  #music-toggle .bars i:nth-child(4){ height:9px; animation-delay:.2s; }
-  #music-toggle[aria-pressed="false"] .bars i{ animation-play-state:paused; height:3px; }
-  @keyframes eq{ 0%,100%{ transform:scaleY(.4);} 50%{ transform:scaleY(1);} }
-  #yt-player-wrap{ position:absolute; width:1px; height:1px; overflow:hidden; opacity:0; pointer-events:none; }
+  #music-toggle .note{ font-size:.9rem; }
 </style>
-</head>
-<body>
 
 <div class="petals" aria-hidden="true">
   <div class="petal"></div><div class="petal"></div><div class="petal"></div>
@@ -390,7 +383,7 @@
 <div id="envelope">
   <p class="env-invite">You are invited to our special day</p>
   <button class="seal-btn" id="open-btn" aria-label="Open the Nikah invitation">
-    <span class="seal-ring"><span class="seal-letter script">S&amp;T</span></span>
+    <span class="seal-ring"><span class="seal-letter script">S&amp;R</span></span>
   </button>
   <p class="env-open-label">Tap to open</p>
 </div>
@@ -400,28 +393,28 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-arch">
-        <div class="hero-monogram"><span>S&amp;T</span></div>
+        <div class="hero-monogram"><span>S&amp;R</span></div>
         <p class="hero-arabic arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
         <p class="hero-eyebrow">WITH THE BLESSING OF ALLAH AND OUR FAMILIES<br>WE REQUEST THE PLEASURE OF YOUR COMPANY<br>AT THE NIKAH OF</p>
         <div class="hero-names">
           <span class="hero-name script">Sakib</span>
           <span class="hero-amp">&amp;</span>
-          <span class="hero-name script">Thamina</span>
+          <span class="hero-name script">Rebecca</span>
         </div>
         <p class="hero-meta"><em>25 October 2026</em> &middot; <em>Venue to be confirmed</em></p>
       </div>
       <button class="hero-scroll" id="scroll-cue" aria-label="Scroll to read more">&#8964;</button>
     </div>
   </section>
- 
+
   <section class="welcome reveal">
     <div class="wrap">
       <p class="eyebrow">In the Name of Allah, the Most Gracious</p>
       <div class="divider" style="margin-top:16px;"></div>
-      <p>With grateful hearts and the blessing of our families, we would be honoured to have you join us as Sakib and Thamina begin their life together. Your presence would mean the world to us as we celebrate this new chapter, In sha Allah.</p>
+      <p>With grateful hearts and the blessing of our families, we would be honoured to have you join us as Sakib and Rebecca begin their life together. Your presence would mean the world to us as we celebrate this new chapter, In sha Allah.</p>
     </div>
   </section>
- 
+
   <section class="couple reveal">
     <div class="wrap">
       <div class="couple-head">
@@ -436,13 +429,13 @@
         </div>
         <div class="couple-card">
           <p class="eyebrow role">The Bride</p>
-          <h3>Thamina</h3>
+          <h3>Rebecca</h3>
           <p class="parents">Daughter of<br>Syed Belal Uddin &amp;<br>Syeda Jahanara Parvin</p>
         </div>
       </div>
     </div>
   </section>
- 
+
   <section class="date-panel reveal">
     <div class="wrap">
       <p class="eyebrow">Counting Every Moment</p>
@@ -456,7 +449,7 @@
       <p class="date-note">Mark your calendars &mdash; we can't wait to celebrate with you on <strong>25th October 2026</strong>, In sha Allah.</p>
     </div>
   </section>
- 
+
   <section class="info reveal">
     <div class="wrap">
       <div class="info-head">
@@ -470,60 +463,90 @@
           <p class="tbc">Address to be confirmed</p>
           <span class="directions-btn" title="Address coming soon">Get Directions</span>
         </div>
-        <div class="info-card">
+        <div class="info-card full">
           <p class="eyebrow" style="font-size:.7rem;">When</p>
           <h3 style="font-size:1.05rem;">25 October 2026</h3>
-        </div>
-        <div class="info-card">
-          <p class="eyebrow" style="font-size:.7rem;">Dress Code</p>
-          <h3 class="tbc" style="font-size:1.05rem;">To be confirmed</h3>
-        </div>
-        <div class="info-card full">
-          <p class="eyebrow" style="font-size:.7rem;">RSVP By</p>
-          <h3 class="tbc" style="font-size:1.05rem;">To be confirmed</h3>
         </div>
       </div>
     </div>
   </section>
- 
+
   <section class="prayer reveal">
     <div class="wrap">
       <p class="eyebrow" style="color:var(--gold-300);">A Prayer for the Couple</p>
       <p class="arabic">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
       <p class="translation">"May Allah bless you both, shower His blessings upon you, and bring you together in goodness."</p>
-      <p class="sign">Sakib &amp; Thamina</p>
+      <p class="sign">Sakib &amp; Rebecca</p>
       <p class="thanks">We can't wait to celebrate with you. Your presence is the greatest gift &mdash; with love and gratitude, from both our families.</p>
     </div>
   </section>
- 
+
   <section class="reveal">
     <div class="wrap gift-note">
       <p class="eyebrow" style="margin-bottom:14px;">A Note on Gifts</p>
       <p>Your presence is the best gift for us. Should you wish to give something more, please note we're unable to receive boxes or physical presents &mdash; kindly contact the family for details.</p>
     </div>
   </section>
- 
-  <footer>Sakib &amp; Thamina &middot; 25 October 2026</footer>
+
+  <footer>Sakib &amp; Rebecca &middot; 25 October 2026</footer>
 </main>
- 
-<div id="yt-player-wrap"><div id="yt-player"></div></div>
- 
-<button id="music-toggle" aria-pressed="false" aria-label="Play music">
-  <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-  <span>Barakallah</span>
-</button>
- 
+
+<div id="yt-player-wrap" style="position:fixed;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;"><div id="yt-player"></div></div>
+<button id="music-toggle" aria-pressed="false" aria-label="Play music"><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Barakallah</span></button>
+
 <script src="https://www.youtube.com/iframe_api"></script>
-<script>
+  <script>
+      var ytPlayer = null;
+      var ytReady = false;
+      var wantsPlay = false;
+      var playing = false;
+      var musicBtn = document.getElementById('music-toggle');
+
+      window.onYouTubeIframeAPIReady = function(){
+        ytPlayer = new YT.Player('yt-player', {
+          videoId: 'cWZfqqwPbtU',
+          playerVars: { autoplay: 0, controls: 0, disablekb: 1, modestbranding: 1, rel: 0, playsinline: 1 },
+          events: {
+            onReady: function(){
+              ytReady = true;
+              if(wantsPlay){ ytPlayer.playVideo(); }
+            },
+            onStateChange: function(e){
+              if(e.data === YT.PlayerState.PLAYING){
+                playing = true;
+                musicBtn.setAttribute('aria-pressed', 'true');
+                musicBtn.setAttribute('aria-label', 'Pause music');
+              } else if(e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED){
+                playing = false;
+                musicBtn.setAttribute('aria-pressed', 'false');
+                musicBtn.setAttribute('aria-label', 'Play music');
+              }
+            }
+          }
+        });
+      };
+
+      function startMusic(){
+        wantsPlay = true;
+        if(ytReady && ytPlayer){ ytPlayer.playVideo(); }
+      }
+      function stopMusic(){
+        wantsPlay = false;
+        if(ytReady && ytPlayer){ ytPlayer.pauseVideo(); }
+      }
+
+      musicBtn.addEventListener('click', function(){
+        if(playing){ stopMusic(); } else { startMusic(); }
+      });
+
 (function(){
   "use strict";
- 
+
   var envelope = document.getElementById('envelope');
   var openBtn = document.getElementById('open-btn');
   var site = document.getElementById('site');
   var scrollCue = document.getElementById('scroll-cue');
-  var musicBtn = document.getElementById('music-toggle');
- 
+
   /* ---------------- countdown to the wedding date ---------------- */
   var WEDDING_DATE = new Date('2026-10-25T00:00:00');
   var cdDays = document.getElementById('cd-days');
@@ -531,9 +554,9 @@
   var cdMins = document.getElementById('cd-mins');
   var cdSecs = document.getElementById('cd-secs');
   var countdownTimer = null;
- 
+
   function pad(n){ return String(n).padStart(2, '0'); }
- 
+
   function tickCountdown(){
     var diff = WEDDING_DATE.getTime() - Date.now();
     if(diff <= 0){
@@ -554,75 +577,32 @@
     cdMins.textContent = pad(mins);
     cdSecs.textContent = pad(secs);
   }
- 
+
   if(cdDays && cdHours && cdMins && cdSecs){
     tickCountdown();
     countdownTimer = setInterval(tickCountdown, 1000);
   }
- 
-  /* ---------------- our song (YouTube embed) ---------------- */
-  var ytPlayer = null;
-  var ytReady = false;
-  var wantsPlay = false;
-  var playing = false;
- 
-  window.onYouTubeIframeAPIReady = function(){
-    ytPlayer = new YT.Player('yt-player', {
-      videoId: 'cWZfqqwPbtU',
-      playerVars: { autoplay: 0, controls: 0, disablekb: 1, modestbranding: 1, rel: 0, playsinline: 1 },
-      events: {
-        onReady: function(){
-          ytReady = true;
-          if(wantsPlay){ ytPlayer.playVideo(); }
-        },
-        onStateChange: function(e){
-          if(e.data === YT.PlayerState.PLAYING){
-            playing = true;
-            musicBtn.setAttribute('aria-pressed', 'true');
-            musicBtn.setAttribute('aria-label', 'Pause music');
-          } else if(e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED){
-            playing = false;
-            musicBtn.setAttribute('aria-pressed', 'false');
-            musicBtn.setAttribute('aria-label', 'Play music');
-          }
-        }
-      }
-    });
-  };
- 
-  function startMusic(){
-    wantsPlay = true;
-    if(ytReady && ytPlayer){ ytPlayer.playVideo(); }
-  }
-  function stopMusic(){
-    wantsPlay = false;
-    if(ytReady && ytPlayer){ ytPlayer.pauseVideo(); }
-  }
- 
-  musicBtn.addEventListener('click', function(){
-    if(playing){ stopMusic(); } else { startMusic(); }
-  });
- 
+
   /* ---------------- envelope open ---------------- */
   function openEnvelope(){
+        startMusic();
     envelope.classList.add('opened');
     site.hidden = false;
     document.body.style.overflow = '';
-    startMusic();
     setTimeout(function(){
       envelope.setAttribute('aria-hidden', 'true');
     }, 950);
     initReveal();
   }
- 
+
   openBtn.addEventListener('click', openEnvelope);
   document.body.style.overflow = 'hidden';
- 
+
   scrollCue.addEventListener('click', function(){
     var next = document.querySelector('.welcome');
     if(next){ next.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
- 
+
   /* ---------------- scroll reveal ---------------- */
   function initReveal(){
     var items = document.querySelectorAll('.reveal');
@@ -640,9 +620,9 @@
     }, { threshold: 0.15 });
     items.forEach(function(el){ io.observe(el); });
   }
- 
+
 })();
 </script>
- 
+
 </body>
 </html>
